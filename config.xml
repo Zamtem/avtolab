@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "avtolab"
+    version   = "1.0.0">
+
+<name>AVTOLAB</name>
+
+<description>
+
+</description>
+
+<author href="https://avto-lab.com" email="avto-lab.com@mail.ru">
+ZAMIR J.T.
+</author>
+<icon src="icon.png" />
+<gap:splash src="splash.png" />
+<access origin="http://avto-lab.com" subdomains="true" />
+</widget>
