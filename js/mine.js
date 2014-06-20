@@ -1,21 +1,13 @@
-document.addEventListener("backbutton", function() {
-            if ( $('.ui-page-active').attr('id') == 'page1') {
-                exitAppPopup();
-            } else {
-                history.back();             
-            }
-        }, false);
-        
-        function exitAppPopup() {
-    navigator.notification.confirm(
-          'Exit PhoneGap ' + device.cordova + ' Demo?'
-        , function(button) {
-              if (button == 2) {
-                  navigator.app.exitApp();
-              } 
-          }
-        , 'Exit'
-        , 'No,Yes'
-    );  
-    return false;
+       document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady(){
+    document.addEventListener("backbutton", function(e){
+       if($.mobile.activePage.is('#page1')){
+           e.preventDefault();
+           navigator.app.exitApp();
+       }
+       else {
+           navigator.app.backHistory()
+       }
+    }, false);
 }
